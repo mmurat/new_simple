@@ -1,0 +1,24 @@
+{
+  "name": "new_simple",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node tests",
+    "asbuild:untouched": "asc assembly/index.ts --target debug",
+    "asbuild:optimized": "asc assembly/index.ts --target release",
+    "asbuild": "npm run asbuild:untouched && npm run asbuild:optimized",
+    "build": "asb --target debug",
+    "build:release": "asb"
+  },
+
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "near-sdk-as": "^3.2.3",
+    "assemblyscript": "^0.18.32"
+  },
+  "dependencies": {
+    "@assemblyscript/loader": "^0.18.32"
+  }
+}
